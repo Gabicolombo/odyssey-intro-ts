@@ -1,3 +1,9 @@
+type Amenity {
+  id: ID!
+  category: String!
+  name: String!
+}
+
 "A particular intergalactic location available for booking"
 type Listing {
   id: ID!
@@ -5,6 +11,7 @@ type Listing {
   numOfBeds: Int
   costPerNight: Float
   closedForBookings: Boolean
+  amenities: [Amenity!]!
 }
 
 type Query {
