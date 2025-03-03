@@ -9,4 +9,5 @@ type Listing {
 
 type Query {
   featuredListings: [Listing!]!
+  listing(id: ID!): Listing
 }

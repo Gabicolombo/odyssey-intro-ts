@@ -5,5 +5,8 @@ export const resolvers: Resolvers = {
     featuredListings: (_:unknown, __:unknown, { dataSources }) => {
       return dataSources.listingAPI.getFeaturedListings();
     },
+    listing: (_:unknown, { id }, { dataSources }) => {
+      return dataSources.listingAPI.getListing(id);
+    }
   }
 }
